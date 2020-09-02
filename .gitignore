@@ -8,7 +8,7 @@
 # Mobile
 # ######
 
-/mobile/node_modules/**/*
+/mobile/node_modules
 /mobile/.expo/*
 /mobile/npm-debug.*
 /mobile/*.jks
