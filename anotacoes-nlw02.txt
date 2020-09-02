@@ -1,0 +1,103 @@
+//// 1) FRONTEND WEB
+
+// Criar projeto frontend web (a partir da raiz)
+yarn create react-app web --template typescript
+
+// Fonts
+// Archivo: regular, bold
+// Poppins: regular
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+font-family: 'Archivo', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+// Dependências
+yarn add axios react-router-dom
+
+// Trabalhar com react-router-dom usando TSX
+yarn add @types/react-router-dom -D
+
+// Ferramenta para wireframe:
+https://whimsical.com/
+
+
+//// 2) BACKEND
+
+// Criar projeto backend (a partir da pasta <raiz>/server)
+yarn init -y
+
+// Adicionar typescript
+yarn add typescript -D
+yarn tsc --init
+
+// Outras dependências
+yarn add ts-node-dev -D
+yarn add express
+yarn add @types/express -D
+// BD SQLite
+yarn add knex sqlite3
+
+
+//// 3) CONECTANDO FRONTEND WEB E BACKEND
+
+// CORS (backend)
+yarn add cors
+yarn add @types/cors -D
+// Axios (frontend)
+yarn add axios
+
+
+//// 4) FRONTEND MOBILE (parte 1)
+
+// EXPO
+yarn global add expo-cli
+
+// Criar projeto mobile (a partir da pasta <raiz>)
+expo init mobile
+>> template: blank Typescript
+
+// Iniciar o servidor
+yarn start
+// Iniciar o servidor, limpando a cache do Metro ao iniciar o servidor
+yarn start --clear
+
+// Para abrir o menu de opções no EXPO: sacudir o smartphone
+
+// Fontes: EXPO Google Fonts
+expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins
+
+// Navegação - https://reactnavigation.org/docs/getting-started
+yarn add @react-navigation/native
+// Configurando o EXPO
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+// Navegação em pilha
+yarn add @react-navigation/stack
+// Navegação em abas (tabs)
+yarn add @react-navigation/bottom-tabs1
+
+
+//// 5) FRONTEND MOBILE (parte 2) e CONECTANDO FRONTEND MOBILE E BACKEND
+
+// Bibliotecas de ícones: Feather Icons, Ionicons
+
+// Axios (mobile)
+yarn add axios
+
+// Verificar URL do mobile na seção Connection do EXPO 
+// Exemplo: exp://192.168.0.12:19000 >> trocar protocolo e porta (apontar para o backend) >> http://192.168.0.12:3333
+// IMPORTANTE: não usar localhost, sempre usar um IP da rede!
+
+// Picker
+yarn add @react-native-community/picker
+// Aparentemente funciona com o EXPO 1.6.0, e não com o 1.6.5. Para atualizar, usar o comando:
+expo update
+// Alternativamente, continuar a usar o Picker do react-native (deprecated)
+
+// Date/Time Picker [TESTAR!!! - não funcionou a princípio...]
+expo install @react-native-community/datetimepicker
+
+// Usar o local storage
+expo install @react-native-community/async-storage
+
+
+
+
